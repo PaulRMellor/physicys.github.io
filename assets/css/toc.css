@@ -1,3 +1,15 @@
+.post-content h1 { font-size: 30px; }
+
+.post-content h2 { font-size: 28px; }
+
+.post-content h3 { font-size: 26px; }
+
+.post-content h4 { font-size: 20px; }
+
+.post-content h5 { font-size: 2rem; }
+
+.post-content h6 { font-size: 2rem; }
+
 .navbar-nav {
     list-style: none;
     margin-left: 0px;
@@ -38,6 +50,27 @@ nav[data-toggle="toc"] .nav-link.active {
 }
 
 .post-content h1, .post-content h2 { color: #DB2C17; }
+
+.page-content h1::before {
+    content: " ";
+    margin-top: -70px;
+    height: 70px;
+    display: block;
+}
+
+.page-content h2::before {
+    content: " ";
+    margin-top: -70px;
+    height: 70px;
+    display: block;
+}
+
+.page-content h3::before {
+    content: " ";
+    margin-top: -70px;
+    height: 70px;
+    display: block;
+}
 
 .post-content h3 { color: #4B9CD3; }
 

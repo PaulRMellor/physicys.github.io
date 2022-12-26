@@ -38,6 +38,9 @@ plugins:
 #source: .
 #destination: ./_site
 permalink: /:title
+collections:
+  work:
+    output: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
