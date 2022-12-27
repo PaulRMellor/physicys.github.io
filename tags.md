@@ -3,15 +3,23 @@ layout: default
 title: Tags
 ---
 
-{% include group-by-array.html %}
+{% include group-by-array.html collection=site.documents field='tags' %}
 
-{% assign docs_by_tags = site.documents | group_by: 'tags' %}
-{% for tag in docs_by_tags %}
-<h2>{{ tag.name }}</h2>
+<div class="post-content e-content">
 <ul>
-    {% for item in tag.items %}
-    <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-    {% endfor %}
-</ul>
-{% endfor %}
+  {% for tag in group_names %}
+    {% assign posts = group_items[forloop.index0] %}
 
+    <li>
+      <h2>{{ tag }}</h2>
+      <ul>
+        {% for post in posts %}
+        <li>
+          <a href='{{ site.baseurl }}{{ post.url }}'>{{ post.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </li>
+  {% endfor %}
+</ul>
+</div>
